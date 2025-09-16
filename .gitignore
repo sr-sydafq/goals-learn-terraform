@@ -1,0 +1,46 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore crash logs
+crash.log
+
+# Ignore Terraform variables files
+*.tfvars
+*.tfvars.json
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore Terraform plan output
+*.tfplan
+
+# Ignore .terraform directory
+.terraform/
+
+# Ignore backup files
+*.backup
+*.bak
+
+# Ignore local .terraformrc and .terraform.d
+.terraformrc
+.terraform.d/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore editor swap files
+*.swp
+*.swo
+
+# Ignore log files
+*.log
+
+# Ignore sensitive files
+secrets.auto.tfvars
+
+# Ignore README artifacts
+README.md.bak
