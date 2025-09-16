@@ -30,3 +30,18 @@ resource "aws_instance" "app_server" {
     Name = "learn-terraform"
   }
 }
+
+# The module block is used to include and configure modules, which are reusable
+# packages of Terraform configurations. In this example, we are including a module
+# that creates an AWS Lambda function.
+# The source argument specifies the path to the module, which can be a local path,
+# a Git repository, or a Terraform Registry module.
+# The other arguments are variables that the module expects.
+module "lambda" {
+  source = "./modules/lambda"
+
+  function_name = "my_lambda_function"
+  handler       = "index.handler"
+  runtime       = "nodejs14.x"
+  role_arn      = "arn:aws:iam::123456789012:role/lambda-execution-role"
+}
